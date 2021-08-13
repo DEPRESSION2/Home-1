@@ -1,18 +1,14 @@
-class Iron:
-
-    melting = 1538
-    evaporation = 2862
-
-    def temperatura(self,t):
-        if temp < self.melting:
-            print("замерзание")
-        elif temp >= self.evaporation:
-            print("плавление")
-        else:
-            print("испарение")
-
-iron = Iron()
-
-temp = int(input("Введите данные: "))
-
-print(iron.temperatura(temp))
+studs = {}
+n = int(input("Количество студентов: "))
+s = 0
+for i in range(n):
+   sname = input(str(i+1) + "-й студент: ")
+   point = int(input("Балл: "))
+   studs[sname] = point
+   s += point
+ 
+avrg = s / n
+print("\nСредний балл: %.0f. Студенты с баллом выше среднего:" % avrg)
+for i in studs:
+    if studs[i] > avrg:
+       print(i)
